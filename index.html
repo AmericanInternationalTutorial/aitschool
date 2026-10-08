@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -46,10 +47,6 @@
       --muted: #52657a;
       --line: #d5e1ec;
       --mist: #f3f7fb;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -250,10 +247,6 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
       .mobile-menu,
       .mobile-panel,
       .btn {
@@ -386,7 +379,7 @@
         </figure>
         <div>
           <h2 class="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-navy">About the school</h2>
-          <p class="mt-5 text-lg leading-relaxed text-[#3d5270]">
+          <p class="mt-5 leading-relaxed text-[#3d5270]">
             Since 2024, AIT has been at the forefront of providing world-class British education in Bangladesh. We combine the rigor of the Edexcel curriculum with Islamic values and local cultural understanding.
           </p>
           <p class="mt-4 leading-relaxed text-[#3d5270]">
@@ -679,10 +672,23 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
   <script>
     const menu = document.getElementById("mobile-menu");
     const menuButton = document.getElementById("menu-button");
     const menuClose = document.getElementById("menu-close");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let lenis = null;
+
+    if (window.Lenis && !reduceMotion) {
+      lenis = new window.Lenis({
+        autoRaf: true,
+        autoToggle: true,
+        anchors: { offset: -84 },
+        stopInertiaOnNavigate: true,
+        respectReducedMotion: true,
+      });
+    }
 
     function setMenu(open) {
       menu.hidden = !open;
@@ -690,6 +696,10 @@
       menuButton.setAttribute("aria-expanded", open ? "true" : "false");
       menuButton.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       document.body.style.overflow = open ? "hidden" : "";
+      if (lenis) {
+        if (open) lenis.stop();
+        else lenis.start();
+      }
     }
 
     menuButton.addEventListener("click", () => setMenu(true));
@@ -719,7 +729,8 @@
     }
 
     markCurrentSection();
-    window.addEventListener("scroll", markCurrentSection, { passive: true });
+    if (lenis) lenis.on("scroll", markCurrentSection);
+    else window.addEventListener("scroll", markCurrentSection, { passive: true });
   </script>
 </body>
 
