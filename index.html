@@ -4,1785 +4,722 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>
-    American International Tutorial (AIT) - Quality British Education in
-    Bangladesh
-  </title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>American International Tutorial — British Edexcel education in Dhaka</title>
+  <meta name="description"
+    content="American International Tutorial in Matuail, Jatrabari, Dhaka offers Pearson Edexcel education alongside Islamic studies, from the primary years through A-Levels." />
 
-  <!-- favicon section -->
   <link rel="icon" type="image/png" href="./fav/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="./fav/favicon.svg" />
   <link rel="shortcut icon" href="./fav/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="AIT" />
   <link rel="manifest" href="./fav/site.webmanifest" />
-  <!-- favicon section -->
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ["Open Sans", "sans-serif"],
-            serif: ["Roboto Slab", "serif"],
+            sans: ["Plus Jakarta Sans", "sans-serif"],
           },
           colors: {
-            aitblue: "#1a4b8c",
-            aityellow: "#f9a825",
-            aitgreen: "#2e7d32",
-          },
-          animation: {
-            "fade-in": "fadeIn 1s ease-out",
-            "slide-up": "slideUp 0.8s ease-out",
-            "slide-in-left": "slideInLeft 0.8s ease-out",
-            "slide-in-right": "slideInRight 0.8s ease-out",
-            "bounce-gentle": "bounceGentle 2s ease-in-out infinite",
-            "pulse-slow": "pulse 3s ease-in-out infinite",
-            float: "float 6s ease-in-out infinite",
-            glow: "glow 2s ease-in-out infinite alternate",
-          },
-          keyframes: {
-            fadeIn: {
-              "0%": { opacity: "0" },
-              "100%": { opacity: "1" },
-            },
-            slideUp: {
-              "0%": { opacity: "0", transform: "translateY(30px)" },
-              "100%": { opacity: "1", transform: "translateY(0)" },
-            },
-            slideInLeft: {
-              "0%": { opacity: "0", transform: "translateX(-30px)" },
-              "100%": { opacity: "1", transform: "translateX(0)" },
-            },
-            slideInRight: {
-              "0%": { opacity: "0", transform: "translateX(30px)" },
-              "100%": { opacity: "1", transform: "translateX(0)" },
-            },
-            bounceGentle: {
-              "0%, 100%": { transform: "translateY(0)" },
-              "50%": { transform: "translateY(-10px)" },
-            },
-            float: {
-              "0%, 100%": { transform: "translateY(0px)" },
-              "50%": { transform: "translateY(-20px)" },
-            },
-            glow: {
-              "0%": { boxShadow: "0 0 20px rgba(249, 168, 37, 0.3)" },
-              "100%": { boxShadow: "0 0 30px rgba(249, 168, 37, 0.6)" },
-            },
+            navy: "#0c3d6e",
+            school: "#0071bc",
+            mist: "#f3f7fb",
+            line: "#d5e1ec",
           },
         },
       },
     };
   </script>
   <style>
-    .sticky-nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      transition: all 0.3s ease;
+    :root {
+      --navy: #0c3d6e;
+      --school: #0071bc;
+      --text: #17324d;
+      --muted: #52657a;
+      --line: #d5e1ec;
+      --mist: #f3f7fb;
     }
 
-    section {
-      scroll-margin-top: 100px;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .nav-scrolled {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    body {
+      background: #fff;
+      color: var(--text);
     }
 
-    /* Navbar text colors */
-    .nav-link-default {
-      color: white;
-      transition: color 0.3s ease;
+    ::selection {
+      background: #cfe6f6;
+      color: var(--navy);
     }
 
-    .nav-scrolled .nav-link-default {
-      color: #374151;
+    section[id] {
+      scroll-margin-top: 5.25rem;
     }
 
-    .nav-scrolled .nav-link-default:hover {
-      color: #1a4b8c;
+    h1,
+    h2 {
+      text-wrap: balance;
     }
 
-    .nav-scrolled .nav-link-active {
-      color: #1a4b8c;
+    .nav-link {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.95rem;
+      font-weight: 500;
     }
 
-    .nav-scrolled .nav-link-active:hover {
-      color: #f9a825;
+    .nav-link:hover,
+    .nav-link.is-active {
+      color: #fff;
     }
 
-    .nav-logo-text {
-      background: linear-gradient(135deg, #ffffff, #e5e7eb);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      transition: all 0.3s ease;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 2.85rem;
+      padding: 0.7rem 1.15rem;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
     }
 
-    .nav-scrolled .nav-logo-text {
-      background: linear-gradient(135deg, #1a4b8c, #2563eb);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    .btn:hover {
+      background: var(--school);
     }
 
-    .nav-logo-subtitle {
-      color: rgba(255, 255, 255, 0.8);
-      transition: color 0.3s ease;
+    .btn-white {
+      background: #fff;
+      color: var(--navy);
     }
 
-    .nav-scrolled .nav-logo-subtitle {
-      color: #6b7280;
+    .btn-white:hover {
+      background: #e7f3fb;
+      color: var(--navy);
     }
 
-    .hero-gradient {
-      background: linear-gradient(135deg,
-          #0f172a 0%,
-          #1e293b 25%,
-          #1a4b8c 75%,
-          #2563eb 100%);
-      position: relative;
+    .btn-line {
+      background: transparent;
+      color: var(--navy);
+      border: 1px solid #b7c9da;
     }
 
-    .hero-pattern {
-      background-image: radial-gradient(circle at 25% 25%,
-          rgba(255, 255, 255, 0.1) 0%,
-          transparent 50%),
-        radial-gradient(circle at 75% 75%,
-          rgba(249, 168, 37, 0.1) 0%,
-          transparent 50%);
+    .btn-line:hover {
+      background: var(--mist);
+      color: var(--navy);
     }
 
-    .modern-card {
-      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-      border: 1px solid rgba(148, 163, 184, 0.1);
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    .photo {
       position: relative;
       overflow: hidden;
+      background: var(--mist);
+      border: 1px solid var(--line);
     }
 
-    .modern-card::before {
-      content: "";
+    .photo img {
       position: absolute;
-      top: 0;
-      left: -100%;
+      inset: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg,
-          transparent,
-          rgba(26, 75, 140, 0.05),
-          transparent);
-      transition: left 0.8s ease;
+      object-fit: cover;
     }
 
-    .modern-card:hover::before {
-      left: 100%;
-    }
-
-    .modern-card:hover {
-      transform: translateY(-12px) scale(1.02);
-      box-shadow: 0 25px 50px rgba(26, 75, 140, 0.15);
-      border-color: rgba(26, 75, 140, 0.2);
-    }
-
-    .hero-btn {
-      background: linear-gradient(135deg, #f9a825 0%, #ff9800 100%);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-btn::before {
-      content: "";
+    .photo-fallback {
       position: absolute;
-      top: 0;
-      left: -100%;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      color: #5d7894;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .photo-fallback strong {
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .photo-fallback span {
+      font-size: 0.8rem;
+    }
+
+    .hero-photo {
       width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg,
-          transparent,
-          rgba(255, 255, 255, 0.2),
-          transparent);
-      transition: left 0.6s ease;
+      height: 52vh;
+      min-height: 18rem;
+      border: 0;
     }
 
-    .hero-btn:hover::before {
-      left: 100%;
-    }
-
-    .hero-btn:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 15px 35px rgba(249, 168, 37, 0.4);
-    }
-
-    .hero-btn-secondary {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      transition: all 0.4s ease;
-    }
-
-    .hero-btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.5);
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(255, 255, 255, 0.1);
-    }
-
-    .card-hover {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .card-hover:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #f9a825 0%, #ff9800 100%);
-      transition: all 0.3s ease;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(249, 168, 37, 0.4);
-    }
-
-    .goal-card {
-      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-      border: 1px solid rgba(26, 75, 140, 0.1);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .goal-card::before {
+    .hero-photo::after {
       content: "";
       position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg,
-          transparent,
-          rgba(26, 75, 140, 0.05),
-          transparent);
-      transition: left 0.6s ease;
-    }
-
-    .goal-card:hover::before {
-      left: 100%;
-    }
-
-    .goal-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(26, 75, 140, 0.15);
-      border-color: rgba(26, 75, 140, 0.2);
-    }
-
-    .contact-card {
-      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-card::after {
-      content: "";
-      position: absolute;
-      top: 0;
       left: 0;
       right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #1a4b8c, #f9a825, #2e7d32);
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
+      bottom: 0;
+      height: 46%;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.55) 38%, #fff 72%, #fff 100%);
+      z-index: 1;
+      pointer-events: none;
     }
 
-    .contact-card:hover::after {
-      transform: scaleX(1);
-    }
-
-    .contact-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    }
-
-    .chairman-card {
-      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-      border: 1px solid rgba(148, 163, 184, 0.1);
+    .hero-title {
       position: relative;
-      overflow: hidden;
+      z-index: 2;
+      margin-top: -7.25rem;
+      padding: 0 1.5rem;
     }
 
-    .chairman-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #1a4b8c, #f9a825, #2e7d32);
+    .hero-rest {
+      padding: 2.25rem 1.5rem 2.75rem;
     }
 
-    .curriculum-card {
-      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-      border: 1px solid rgba(148, 163, 184, 0.1);
-      transition: all 0.4s ease;
-      position: relative;
-      overflow: hidden;
+    @media (min-width: 1024px) {
+      .hero-photo {
+        height: auto;
+        border: 1px solid var(--line);
+      }
+
+      .hero-photo::after {
+        display: none;
+      }
+
+      .hero-title,
+      .hero-rest {
+        margin-top: 0;
+        padding: 0;
+      }
     }
 
-    .curriculum-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg,
-          transparent,
-          rgba(26, 75, 140, 0.03),
-          transparent);
-      transition: left 0.8s ease;
-    }
-
-    .curriculum-card:hover::before {
-      left: 100%;
-    }
-
-    .curriculum-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(26, 75, 140, 0.1);
-    }
-
-    /* Mobile Menu Styles */
-    .mobile-menu-overlay {
+    .mobile-menu {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1998;
+      inset: 0;
+      z-index: 60;
+      background: rgba(8, 32, 56, 0.5);
       opacity: 0;
       visibility: hidden;
-      transition: all 0.3s ease;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
     }
 
-    .mobile-menu-overlay.active {
+    .mobile-menu.is-open {
       opacity: 1;
       visibility: visible;
     }
 
-    .mobile-menu-sidebar {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 300px;
+    .mobile-panel {
+      margin-left: auto;
+      width: min(100%, 22rem);
       height: 100%;
-      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-      z-index: 1999;
-      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      padding: 1.25rem 1.5rem 2rem;
+      transform: translateX(1.25rem);
+      transition: transform 0.25s ease;
     }
 
-    .mobile-menu-sidebar.active {
-      right: 0;
+    .mobile-menu.is-open .mobile-panel {
+      transform: translateX(0);
     }
 
-    .hamburger {
-      width: 24px;
-      height: 24px;
-      position: relative;
-      cursor: pointer;
-    }
-
-    .hamburger span {
+    .menu-toggle span {
       display: block;
-      position: absolute;
-      height: 3px;
-      width: 100%;
-      background: white;
-      border-radius: 3px;
-      opacity: 1;
-      left: 0;
-      transform: rotate(0deg);
-      transition: 0.25s ease-in-out;
+      width: 1.25rem;
+      height: 1.5px;
+      background: #fff;
+      margin: 5px 0;
     }
 
-    .nav-scrolled .hamburger span {
-      background: #374151;
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid #7ec8ef;
+      outline-offset: 3px;
     }
 
-    .hamburger span:nth-child(1) {
-      top: 0px;
-    }
-
-    .hamburger span:nth-child(2) {
-      top: 8px;
-    }
-
-    .hamburger span:nth-child(3) {
-      top: 16px;
-    }
-
-    .hamburger.active span:nth-child(1) {
-      top: 8px;
-      transform: rotate(135deg);
-    }
-
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-      left: -60px;
-    }
-
-    .hamburger.active span:nth-child(3) {
-      top: 8px;
-      transform: rotate(-135deg);
-    }
-
-    .animate-on-scroll {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease-out;
-    }
-
-    .animate-on-scroll.animated {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .gradient-text {
-      background: linear-gradient(135deg, #1a4b8c, #2563eb);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .floating-elements {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    .floating-element {
-      position: absolute;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      animation: float 8s ease-in-out infinite;
-    }
-
-    .floating-element:nth-child(1) {
-      width: 80px;
-      height: 80px;
-      top: 20%;
-      left: 10%;
-      animation-delay: 0s;
-    }
-
-    .floating-element:nth-child(2) {
-      width: 120px;
-      height: 120px;
-      top: 60%;
-      right: 15%;
-      animation-delay: 2s;
-    }
-
-    .floating-element:nth-child(3) {
-      width: 60px;
-      height: 60px;
-      bottom: 30%;
-      left: 20%;
-      animation-delay: 4s;
-    }
-
-    /* Mobile font size adjustments */
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.5rem;
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
       }
 
-      .hero-subtitle {
-        font-size: 1rem;
-      }
-
-      .section-title {
-        font-size: 2rem;
-      }
-
-      .section-subtitle {
-        font-size: 1rem;
-      }
-
-      .card-title {
-        font-size: 1.25rem;
-      }
-
-      .card-text {
-        font-size: 0.875rem;
-      }
-
-      .chairman-text {
-        font-size: 0.95rem;
+      .mobile-menu,
+      .mobile-panel,
+      .btn {
+        transition: none;
       }
     }
   </style>
 </head>
 
-<body class="font-sans bg-gray-50">
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
-
-  <!-- Mobile Menu Sidebar -->
-  <div id="mobile-menu-sidebar" class="mobile-menu-sidebar">
-    <div class="p-6">
-      <div class="flex items-center justify-between mb-8">
-        <div class="flex items-center space-x-3">
-          <img class="h-12 w-12" src="./icons/logo.svg" alt="AIT logo" />
-          <div>
-            <span class="text-lg font-bold text-aitblue block">AIT</span>
-            <span class="text-xs text-gray-500">Excellence in Education</span>
-          </div>
-        </div>
-        <button id="mobile-menu-close" class="p-2 rounded-lg hover:bg-gray-100 transition-colors">
-          <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-
-      <nav class="space-y-4">
-        <a href="#home" class="block py-3 px-4 text-aitblue font-semibold bg-aitblue/10 rounded-lg transition-colors">
-          Home
-        </a>
-        <a href="#about"
-          class="block py-3 px-4 text-gray-700 hover:text-aitblue hover:bg-gray-100 rounded-lg transition-colors">
-          About
-        </a>
-        <a href="#curriculum"
-          class="block py-3 px-4 text-gray-700 hover:text-aitblue hover:bg-gray-100 rounded-lg transition-colors">
-          Curriculum
-        </a>
-        <a href="#admissions"
-          class="block py-3 px-4 text-gray-700 hover:text-aitblue hover:bg-gray-100 rounded-lg transition-colors">
-          Admissions
-        </a>
-        <a href="#contact"
-          class="block py-3 px-4 text-gray-700 hover:text-aitblue hover:bg-gray-100 rounded-lg transition-colors">
-          Contact
-        </a>
-      </nav>
-
-      <div class="mt-8 pt-6 border-t border-gray-200">
-        <div class="text-center">
-          <p class="text-sm text-gray-600 mb-4">Ready to join AIT?</p>
-          <a href="#admissions"
-            class="inline-block bg-aitblue text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-            Apply Now
-          </a>
-        </div>
-      </div>
+<body class="font-sans antialiased">
+  <div class="bg-[#082844] text-white/75">
+    <div class="max-w-6xl mx-auto px-6 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1 text-[0.8rem]">
+      <p>House 50/1, Road 8/A, Matuail, Jatrabari</p>
+      <p>Sun–Thu 8:00–16:00 <span class="mx-2 text-white/30" aria-hidden="true">·</span> +880 2-XXXXXXX</p>
     </div>
   </div>
 
-  <!-- Navigation -->
-  <nav id="navbar" class="sticky-nav">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-3 animate-slide-in-left">
-        <div class="relative">
-          <div class="absolute inset-0 bg-gradient-to-r from-aitblue to-blue-600 rounded-full blur opacity-10"></div>
-          <img class="h-16 w-16 relative z-10" src="./icons/logo.svg" alt="AIT logo" />
+  <header id="navbar" class="sticky top-0 z-40 bg-navy text-white">
+    <div class="max-w-6xl mx-auto px-6 h-[4.5rem] flex items-center justify-between gap-6">
+      <a href="#home" class="flex items-center gap-3 min-w-0">
+        <img class="h-11 w-auto shrink-0 bg-white p-1" src="./icons/logo.svg" alt="" />
+        <span class="min-w-0">
+          <span class="block text-[0.98rem] leading-tight font-semibold truncate">American International Tutorial</span>
+          <span class="block text-[0.72rem] text-white/70 mt-0.5">Jatrabari, Dhaka</span>
+        </span>
+      </a>
+
+      <nav class="hidden xl:flex items-center gap-7" aria-label="Primary">
+        <a href="#home" class="nav-link is-active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#curriculum" class="nav-link">Curriculum</a>
+        <a href="#admissions" class="nav-link">Admissions</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#admissions" class="btn btn-white hidden xl:inline-flex !min-h-0 !py-2 !px-3.5 text-sm">Apply</a>
+        <button id="menu-button" class="menu-toggle xl:hidden p-2 -mr-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu" class="mobile-menu xl:hidden" hidden>
+    <div class="mobile-panel">
+      <div class="flex items-center justify-between mb-8">
+        <span class="font-semibold text-navy">AIT</span>
+        <button id="menu-close" class="text-sm text-[#52657a]" aria-label="Close menu">Close</button>
+      </div>
+      <nav class="flex flex-col text-lg font-semibold" aria-label="Mobile">
+        <a href="#home" class="py-3 border-t border-line text-navy">Home</a>
+        <a href="#about" class="py-3 border-t border-line text-navy">About</a>
+        <a href="#curriculum" class="py-3 border-t border-line text-navy">Curriculum</a>
+        <a href="#admissions" class="py-3 border-t border-line text-navy">Admissions</a>
+        <a href="#contact" class="py-3 border-t border-b border-line text-navy">Contact</a>
+      </nav>
+      <a href="#admissions" class="btn mt-8 w-full">Apply for a place</a>
+    </div>
+  </div>
+
+  <main>
+    <section id="home" class="bg-white">
+      <div class="lg:max-w-6xl lg:mx-auto lg:px-6 lg:py-16 lg:grid lg:grid-cols-2 lg:gap-14 lg:items-center">
+        <figure class="photo hero-photo lg:order-2 lg:aspect-[4/3]">
+          <img src="./icons/placeholder.svg" alt="Students at the American International Tutorial campus" />
+        </figure>
+
+        <div class="hero-copy lg:order-1">
+          <div class="hero-title">
+            <p class="text-school font-semibold text-sm mb-3">Pearson Edexcel · Established 2024</p>
+            <h1 class="text-[clamp(2.15rem,5vw,3.7rem)] leading-[1.08] font-bold tracking-[-0.03em] text-navy">
+              British Edexcel education in Bangladesh
+            </h1>
+          </div>
+          <div class="hero-rest">
+            <p class="text-lg leading-relaxed text-[#3d5270] max-w-xl">
+              Preparing students for global success through the internationally recognized Edexcel curriculum, combined with Islamic values and careful teaching.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#admissions" class="btn">Apply for a place</a>
+              <a href="#curriculum" class="btn btn-line">See the curriculum</a>
+              <a href="./prospectus.pdf" class="btn btn-line" download>Download prospectus</a>
+            </div>
+            <dl class="mt-10 grid grid-cols-3 gap-4 max-w-lg border-t border-line pt-6">
+              <div>
+                <dt class="text-xs text-[#6b7f96]">Ages</dt>
+                <dd class="mt-1 font-semibold text-navy">5–18</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-[#6b7f96]">Class size</dt>
+                <dd class="mt-1 font-semibold text-navy">20</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-[#6b7f96]">Year begins</dt>
+                <dd class="mt-1 font-semibold text-navy">January</dd>
+              </div>
+            </dl>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="bg-mist" aria-label="Why choose AIT">
+      <div class="max-w-6xl mx-auto px-6 py-16 lg:py-20">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-navy">Why choose AIT</h2>
+        <div class="mt-8 grid md:grid-cols-3 gap-4">
+          <article class="bg-white border border-line p-6">
+            <h3 class="text-lg font-semibold text-navy">Edexcel curriculum</h3>
+            <p class="mt-2 text-[#3d5270] leading-relaxed">An internationally recognized British curriculum that prepares students for IGCSE, A-Levels, and universities abroad.</p>
+          </article>
+          <article class="bg-white border border-line p-6">
+            <h3 class="text-lg font-semibold text-navy">A local grounding</h3>
+            <p class="mt-2 text-[#3d5270] leading-relaxed">International standards held alongside Bangladeshi context and Islamic values, so students grow up knowing both.</p>
+          </article>
+          <article class="bg-white border border-line p-6">
+            <h3 class="text-lg font-semibold text-navy">Teachers who stay close</h3>
+            <p class="mt-2 text-[#3d5270] leading-relaxed">Qualified teachers with international experience, ongoing training, and time enough for a class of twenty.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="bg-white">
+      <div class="max-w-6xl mx-auto px-6 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+        <figure class="photo aspect-[4/3]">
+          <img src="./icons/placeholder.svg" alt="The AIT campus in Matuail, Jatrabari" />
+        </figure>
         <div>
-          <span class="text-xl font-bold nav-logo-text block">American International Tutorial</span>
-          <span class="text-xs nav-logo-subtitle font-medium">Excellence in Education</span>
-        </div>
-      </div>
-
-      <div class="hidden md:flex space-x-8">
-        <a href="#home"
-          class="nav-link nav-link-default hover:text-aityellow transition-all duration-300 relative group">
-          Home
-          <span
-            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-aityellow transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#about"
-          class="nav-link nav-link-default hover:text-aityellow transition-all duration-300 relative group">
-          About
-          <span
-            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-aityellow transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#curriculum"
-          class="nav-link nav-link-default hover:text-aityellow transition-all duration-300 relative group">
-          Curriculum
-          <span
-            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-aityellow transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#admissions"
-          class="nav-link nav-link-default hover:text-aityellow transition-all duration-300 relative group">
-          Admissions
-          <span
-            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-aityellow transition-all duration-300 group-hover:w-full"></span>
-        </a>
-        <a href="#contact"
-          class="nav-link nav-link-default hover:text-aityellow transition-all duration-300 relative group">
-          Contact
-          <span
-            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-aityellow transition-all duration-300 group-hover:w-full"></span>
-        </a>
-      </div>
-
-      <button id="mobile-menu-button"
-        class="md:hidden focus:outline-none p-2 rounded-lg hover:bg-gray-100 transition-colors">
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero-gradient text-white pt-[12rem] pb-24 relative overflow-hidden">
-    <div class="floating-elements">
-      <div class="floating-element"></div>
-      <div class="floating-element"></div>
-      <div class="floating-element"></div>
-    </div>
-
-    <div class="container mx-auto px-6 text-center relative z-10">
-      <div class="max-w-5xl mx-auto">
-        <div class="animate-fade-in">
-          <h1 class="hero-title text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">
-            British
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-aityellow to-yellow-300">Edexcel</span>
-            <br />Education in
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white">Bangladesh</span>
-          </h1>
-
-          <p class="hero-subtitle text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed text-blue-100">
-            Preparing students for global success through the internationally
-            recognized Edexcel curriculum combined with
-            <span class="text-aityellow font-semibold">Islamic values</span>
-            and modern teaching excellence.
+          <h2 class="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-navy">About the school</h2>
+          <p class="mt-5 text-lg leading-relaxed text-[#3d5270]">
+            Since 2024, AIT has been at the forefront of providing world-class British education in Bangladesh. We combine the rigor of the Edexcel curriculum with Islamic values and local cultural understanding.
           </p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row justify-center gap-6 animate-slide-up">
-          <a href="#admissions"
-            class="hero-btn text-aitblue font-bold py-4 px-10 rounded-full text-lg inline-flex items-center justify-center space-x-3 group">
-            <span>Apply Now</span>
-            <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
+          <p class="mt-4 leading-relaxed text-[#3d5270]">
+            Our mission is to nurture confident, capable, and caring global citizens who are prepared to make meaningful contributions to society while maintaining their Islamic identity and Bangladeshi heritage.
+          </p>
+          <a href="#contact" class="btn mt-8">Visit the campus</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Features Section -->
-  <section class="py-20 bg-white relative">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16 animate-on-scroll">
-        <h2 class="section-title text-4xl font-serif font-bold gradient-text mb-4">
-          Why Choose AIT?
-        </h2>
-        <p class="section-subtitle text-xl text-gray-600 max-w-2xl mx-auto">
-          Discover what makes our educational approach unique and effective
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="goal-card p-8 rounded-2xl animate-on-scroll animated">
-          <div
-            class="bg-gradient-to-br from-aitblue to-blue-600 text-white w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <h3 class="card-title text-2xl font-bold mb-4 text-gray-800">
-            Edexcel Curriculum
-          </h3>
-          <p class="card-text text-gray-600 leading-relaxed">
-            Internationally recognized British curriculum that prepares
-            students for IGCSE, A-Levels, and global universities with proven
-            excellence.
-          </p>
+    <section class="bg-mist" aria-labelledby="principal-heading">
+      <div class="max-w-6xl mx-auto px-6 py-16 lg:py-20 grid lg:grid-cols-12 gap-10 lg:gap-14">
+        <div class="lg:col-span-4">
+          <figure class="photo aspect-[3/4]">
+            <img src="./icons/placeholder.svg" alt="Principal of American International Tutorial" />
+          </figure>
+          <p class="mt-4 font-semibold text-navy">Principal</p>
+          <p class="text-sm text-[#52657a]">American International Tutorial</p>
         </div>
 
-        <div class="goal-card p-8 rounded-2xl animate-on-scroll animated">
-          <div
-            class="bg-gradient-to-br from-aitgreen to-green-600 text-white w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064">
-              </path>
-            </svg>
-          </div>
-          <h3 class="card-title text-2xl font-bold mb-4 text-gray-800">
-            Global Perspective
-          </h3>
-          <p class="card-text text-gray-600 leading-relaxed">
-            Education that combines international standards with local
-            Bangladeshi context and Islamic values for well-rounded
-            development.
-          </p>
-        </div>
-
-        <div class="goal-card p-8 rounded-2xl animate-on-scroll animated">
-          <div
-            class="bg-gradient-to-br from-aityellow to-orange-500 text-white w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-              </path>
-            </svg>
-          </div>
-          <h3 class="card-title text-2xl font-bold mb-4 text-gray-800">
-            Expert Faculty
-          </h3>
-          <p class="card-text text-gray-600 leading-relaxed">
-            Our teachers are highly qualified with international experience,
-            continuous training, and a genuine passion for student success.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-    <div class="container mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div class="animate-on-scroll">
-          <h2 class="section-title text-4xl font-serif font-bold gradient-text mb-6">
-            About American International Tutorial
+        <div class="lg:col-span-8">
+          <p class="text-school font-semibold text-sm mb-3">Principal's message</p>
+          <h2 id="principal-heading" class="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-navy">
+            We learn, we lead, we inspire.
           </h2>
-          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-            Since 2024, AIT has been at the forefront of providing world-class
-            British education in Bangladesh. We combine the rigor of the
-            Edexcel curriculum with Islamic values and local cultural
-            understanding.
-          </p>
-          <p class="card-text text-gray-600 mb-8 leading-relaxed">
-            Our mission is to nurture confident, capable, and caring global
-            citizens who are prepared to make meaningful contributions to
-            society while maintaining their Islamic identity and Bangladeshi
-            heritage.
-          </p>
-
-
-
-          <a href="#contact"
-            class="btn-primary text-aitblue font-bold py-3 px-8 rounded-full inline-flex items-center space-x-2">
-            <span>Visit Our Campus</span>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
-        </div>
-
-        <div class="animate-on-scroll">
-          <div class="relative">
-            <div class="absolute inset-0 bg-gradient-to-r from-aitblue to-blue-600 rounded-3xl transform rotate-6">
-            </div>
-            <img src="./icons/placeholder.svg" alt="AIT Campus"
-              class="relative z-10 rounded-3xl shadow-2xl w-full h-96 object-cover" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Principal's Message Section -->
-  <section class="py-24 bg-white">
-    <div class="container mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <!-- Image Side -->
-        <div class="animate-on-scroll">
-          <div class="relative">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-aitblue to-blue-600 rounded-3xl transform rotate-6 opacity-10">
-            </div>
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-aityellow to-orange-500 rounded-3xl transform -rotate-3 opacity-10">
-            </div>
-
-            <div class="relative bg-white p-2 rounded-3xl shadow-2xl">
-              <img src="./icons/placeholder.svg" alt="Principal" class="w-full h-auto object-cover rounded-2xl" />
-            </div>
-
-            <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl">
-              <div class="text-center">
-                <div class="text-2xl font-bold text-aitblue">15+</div>
-                <div class="text-sm text-gray-600">Years Leadership</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Message Side -->
-        <div class="animate-on-scroll">
-          <div class="">
-            <div class="mb-8">
-              <div class="inline-block px-4 py-2 bg-aitblue/10 text-aitblue rounded-full text-sm font-semibold mb-4">
-                Principal's Message
-              </div>
-              <h2 class="text-4xl font-serif font-bold gradient-text mb-3">
-                "We Learn, We Lead, We Inspire"
-              </h2>
-              <div class="flex items-center space-x-3">
-                <div class="w-12 h-0.5 bg-gradient-to-r from-aitblue to-aityellow"></div>
-                <p class="text-lg text-gray-600 font-medium">Principal</p>
-              </div>
-            </div>
-
-            <div class="relative">
-              <div class="absolute top-0 left-0 text-6xl text-aitblue/20 font-serif leading-none">
-                "
-              </div>
-
-              <div class="pl-8 space-y-4">
-                <p class="text-gray-700 leading-relaxed">
-                  I am delighted to welcome you to the American International
-                  Tutorial. I have a vision to build a nation that is honest,
-                  moral, industrious, skilled, and intelligent—one that
-                  follows the path of Islam as described in the Holy Qur'an
-                  and taught by Prophet Muhammad (peace be upon him).
-                </p>
-
-                <p class="text-gray-700 leading-relaxed">
-                  As a Muslim, I believe that without strong religious
-                  beliefs, one cannot lead a truly moral life. Everyone should
-                  strive to be a true Muslim. Furthermore, other religions
-                  also uphold moral values.
-                  <span class="font-semibold text-aitblue">Almighty Allah provides wealth equally among Muslims,
-                    Hindus, Buddhists, and Christians</span>, so why shouldn't we respect one another? We must show
-                  respect to people of all religions.
-                </p>
-
-                <p class="text-gray-700 leading-relaxed">
-                  To fulfill our vision, we will focus on Islamic studies and
-                  Qur'an education. We will provide support for Hifz according
-                  to parents' preferences and ensure religious studies are
-                  available for students of other faiths.
-                </p>
-
-                <p class="text-gray-700 leading-relaxed">
-                  We are following the American and British education systems,
-                  and we aim to present all teaching materials in a clear,
-                  scientific, and digital format based on their syllabuses. We
-                  emphasize fluency in
-                  <span class="font-semibold text-aitgreen">English, mathematics, science, history, geography,
-                    Bangladesh studies, and ICT</span>.
-                </p>
-
-                <p class="text-gray-700 leading-relaxed">
-                  We encourage students to learn additional languages, such as
-                  German, Spanish, or French, and will organize art and craft
-                  activities as well as other extracurricular opportunities.
-                </p>
-
-                <p class="text-gray-700 leading-relaxed font-semibold">
-                  Finally, entrust us with your child, and we will return to
-                  you a moral, honest, skilled, and confident young person.
-                </p>
-              </div>
-
-              <div class="absolute bottom-0 right-0 text-6xl text-aitblue/20 font-serif leading-none rotate-180">
-                "
-              </div>
-            </div>
-
-            <div class="mt-8 pt-6 border-t border-gray-200">
-              <div class="flex items-center justify-between">
-                <div>
-                  <div class="font-bold text-gray-800">Principal</div>
-                  <div class="text-sm text-gray-600">
-                    American International Tutorial
-                  </div>
-                </div>
-                <div
-                  class="w-16 h-16 bg-gradient-to-br from-aitblue to-blue-600 rounded-full flex items-center justify-center">
-                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z">
-                    </path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
-                    </path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Student Goals Section -->
-  <section class="py-24 bg-gradient-to-br from-gray-50 to-indigo-50">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-20 animate-on-scroll">
-        <div class="inline-block px-4 py-2 bg-aitgreen/10 text-aitgreen rounded-full text-sm font-semibold mb-4">
-          Student Development
-        </div>
-        <h2 class="section-title text-5xl font-serif font-bold gradient-text mb-6">
-          Our Goals for Students
-        </h2>
-        <p class="section-subtitle text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Empowering students with comprehensive skills and values for global
-          success and meaningful contribution to society
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="goal-card p-8 rounded-2xl animate-on-scroll">
-          <div class="flex items-center mb-6">
-            <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-4 rounded-2xl mr-4 shadow-lg">
-              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12">
-                </path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="card-title text-xl font-bold text-gray-800">
-                English Proficiency
-              </h3>
-              <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mt-2"></div>
-            </div>
-          </div>
-          <p class="card-text text-gray-600 leading-relaxed">
-            Develop fluent English communication skills for academic and
-            professional success worldwide through immersive learning
-            experiences.
-          </p>
-        </div>
-
-        <div class="goal-card p-8 rounded-2xl animate-on-scroll">
-          <div class="flex items-center mb-6">
-            <div class="bg-gradient-to-br from-green-500 to-green-600 text-white p-4 rounded-2xl mr-4 shadow-lg">
-              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
-                </path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="card-title text-xl font-bold text-gray-800">
-                Quranic Studies
-              </h3>
-              <div class="w-12 h-1 bg-gradient-to-r from-green-500 to-green-600 rounded-full mt-2"></div>
-            </div>
-          </div>
-          <p class="card-text text-gray-600 leading-relaxed">
-            Build strong foundation in Quran recitation, memorization, and
-            understanding with proper tajweed and Islamic teachings.
-          </p>
-        </div>
-
-        <div class="goal-card p-8 rounded-2xl animate-on-scroll">
-          <div class="flex items-center mb-6">
-            <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-4 rounded-2xl mr-4 shadow-lg">
-              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z">
-                </path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
-                </path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="card-title text-xl font-bold text-gray-800">
-                Academic Excellence
-              </h3>
-              <div class="w-12 h-1 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mt-2"></div>
-            </div>
-          </div>
-          <p class="card-text text-gray-600 leading-relaxed">
-            Achieve outstanding results in Edexcel IGCSE and A-Level
-            examinations through rigorous preparation and personalized
-            support.
-          </p>
-        </div>
-
-        <div class="goal-card p-8 rounded-2xl animate-on-scroll">
-          <div class="flex items-center mb-6">
-            <div class="bg-gradient-to-br from-orange-500 to-orange-600 text-white p-4 rounded-2xl mr-4 shadow-lg">
-              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
-                </path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="card-title text-xl font-bold text-gray-800">
-                Islamic Values
-              </h3>
-              <div class="w-12 h-1 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mt-2"></div>
-            </div>
-          </div>
-          <p class="card-text text-gray-600 leading-relaxed">
-            Cultivate strong Islamic character, ethics, and identity alongside
-            modern education for balanced personal development.
-          </p>
-        </div>
-
-        <div class="goal-card p-8 rounded-2xl animate-on-scroll">
-          <div class="flex items-center mb-6">
-            <div class="bg-gradient-to-br from-teal-500 to-teal-600 text-white p-4 rounded-2xl mr-4 shadow-lg">
-              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064">
-                </path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="card-title text-xl font-bold text-gray-800">
-                Global Citizenship
-              </h3>
-              <div class="w-12 h-1 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full mt-2"></div>
-            </div>
-          </div>
-          <p class="card-text text-gray-600 leading-relaxed">
-            Develop awareness and skills to thrive in an interconnected world
-            while maintaining cultural roots and values.
-          </p>
-        </div>
-
-        <div class="goal-card p-8 rounded-2xl animate-on-scroll">
-          <div class="flex items-center mb-6">
-            <div class="bg-gradient-to-br from-indigo-500 to-indigo-600 text-white p-4 rounded-2xl mr-4 shadow-lg">
-              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
-                </path>
-              </svg>
-            </div>
-            <div>
-              <h3 class="card-title text-xl font-bold text-gray-800">
-                Critical Thinking
-              </h3>
-              <div class="w-12 h-1 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full mt-2"></div>
-            </div>
-          </div>
-          <p class="card-text text-gray-600 leading-relaxed">
-            Foster analytical skills and problem-solving abilities essential
-            for higher education and lifelong learning success.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Curriculum Section -->
-  <section id="curriculum" class="py-24 bg-white relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent">
-    </div>
-
-    <div class="container mx-auto px-6 relative z-10">
-      <div class="mx-auto">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <!-- Content Side -->
-          <div class="animate-on-scroll">
-            <div class="mb-8">
-              <div class="inline-block px-4 py-2 bg-aitblue/10 text-aitblue rounded-full text-sm font-semibold mb-4">
-                World-Class Education
-              </div>
-              <h2 class="section-title text-5xl font-serif font-bold gradient-text mb-6">
-                Edexcel International Curriculum
-              </h2>
-              <p class="section-subtitle text-xl text-gray-600 leading-relaxed">
-                AIT proudly offers the Pearson Edexcel curriculum, one of the
-                most respected British educational programs worldwide,
-                ensuring your child receives world-class education.
-              </p>
-            </div>
-
-            <div class="space-y-6 mb-10">
-              <div class="flex items-start space-x-4 group">
-                <div
-                  class="bg-gradient-to-br from-green-500 to-green-600 text-white p-2 rounded-xl mt-1 group-hover:scale-110 transition-transform">
-                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-bold text-gray-800 text-lg mb-1">
-                    Global Recognition
-                  </h4>
-                  <p class="card-text text-gray-600">
-                    Internationally recognized qualifications accepted by
-                    universities worldwide including UK, USA, Canada, and
-                    Australia
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-start space-x-4 group">
-                <div
-                  class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-2 rounded-xl mt-1 group-hover:scale-110 transition-transform">
-                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-bold text-gray-800 text-lg mb-1">
-                    Academic Excellence
-                  </h4>
-                  <p class="card-text text-gray-600">
-                    Rigorous academic standards that challenge and inspire
-                    students to reach their full potential
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-start space-x-4 group">
-                <div
-                  class="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-2 rounded-xl mt-1 group-hover:scale-110 transition-transform">
-                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-bold text-gray-800 text-lg mb-1">
-                    Comprehensive Assessment
-                  </h4>
-                  <p class="card-text text-gray-600">
-                    Modern assessment methods that evaluate true understanding
-                    and practical application
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-start space-x-4 group">
-                <div
-                  class="bg-gradient-to-br from-orange-500 to-orange-600 text-white p-2 rounded-xl mt-1 group-hover:scale-110 transition-transform">
-                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-bold text-gray-800 text-lg mb-1">
-                    Seamless Progression
-                  </h4>
-                  <p class="card-text text-gray-600">
-                    Smooth transition from primary through secondary education
-                    with consistent quality
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <a href="#contact"
-              class="inline-flex items-center space-x-3 bg-aitblue hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-xl group">
-              <span>Explore Our Curriculum</span>
-              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
-                </path>
-              </svg>
-            </a>
-          </div>
-
-          <!-- Academic Pathway Side -->
-          <div class="animate-on-scroll">
-            <div class="curriculum-card p-10 rounded-3xl shadow-2xl">
-              <div class="mb-8">
-                <h3 class="text-3xl font-bold gradient-text mb-4">
-                  Our Academic Pathway
-                </h3>
-                <p class="card-text text-gray-600">
-                  A comprehensive journey from foundation to university
-                  preparation
-                </p>
-              </div>
-
-              <div class="space-y-6">
-                <div class="relative pl-8 pb-6">
-                  <div
-                    class="absolute left-0 top-0 w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center">
-                    <div class="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  <div class="absolute left-3 top-6 w-0.5 h-full bg-gradient-to-b from-yellow-400 to-blue-500"></div>
-
-                  <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-2xl">
-                    <div class="flex items-center justify-between mb-2">
-                      <h4 class="font-bold text-gray-800 text-lg">
-                        Primary Years
-                      </h4>
-                      <span class="text-sm font-semibold text-yellow-600 bg-yellow-200 px-3 py-1 rounded-full">Ages
-                        5-11</span>
-                    </div>
-                    <p class="card-text text-gray-600">
-                      Building strong foundations in core subjects with
-                      Edexcel Primary curriculum and Islamic studies
-                      integration
-                    </p>
-                  </div>
-                </div>
-
-                <div class="relative pl-8 pb-6">
-                  <div
-                    class="absolute left-0 top-0 w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-                    <div class="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  <div class="absolute left-3 top-6 w-0.5 h-full bg-gradient-to-b from-blue-500 to-yellow-400"></div>
-
-                  <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-2xl">
-                    <div class="flex items-center justify-between mb-2">
-                      <h4 class="font-bold text-gray-800 text-lg">
-                        Lower Secondary
-                      </h4>
-                      <span class="text-sm font-semibold text-blue-600 bg-blue-200 px-3 py-1 rounded-full">Ages
-                        11-14</span>
-                    </div>
-                    <p class="card-text text-gray-600">
-                      Edexcel Lower Secondary program preparing students for
-                      IGCSE success with expanded subject choices
-                    </p>
-                  </div>
-                </div>
-
-                <div class="relative pl-8 pb-6">
-                  <div
-                    class="absolute left-0 top-0 w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center">
-                    <div class="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                  <div class="absolute left-3 top-6 w-0.5 h-full bg-gradient-to-b from-yellow-400 to-blue-500"></div>
-
-                  <div class="bg-gradient-to-r from-yellow-50 to-yellow-100 p-6 rounded-2xl">
-                    <div class="flex items-center justify-between mb-2">
-                      <h4 class="font-bold text-gray-800 text-lg">IGCSE</h4>
-                      <span class="text-sm font-semibold text-yellow-600 bg-yellow-200 px-3 py-1 rounded-full">Ages
-                        14-16</span>
-                    </div>
-                    <p class="card-text text-gray-600">
-                      Internationally recognized qualifications with 8-10
-                      subject choices for comprehensive education
-                    </p>
-                  </div>
-                </div>
-
-                <div class="relative pl-8">
-                  <div
-                    class="absolute left-0 top-0 w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-                    <div class="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-
-                  <div class="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-2xl">
-                    <div class="flex items-center justify-between mb-2">
-                      <h4 class="font-bold text-gray-800 text-lg">
-                        A-Levels
-                      </h4>
-                      <span class="text-sm font-semibold text-blue-600 bg-blue-200 px-3 py-1 rounded-full">Ages
-                        16-18</span>
-                    </div>
-                    <p class="card-text text-gray-600">
-                      Gold standard preparation for top universities worldwide
-                      with specialized subject focus
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Admissions Section -->
-  <section id="admissions" class="py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-50/50 to-transparent"></div>
-
-    <div class="container mx-auto px-6 relative z-10">
-      <div class="text-center mb-20 animate-on-scroll">
-        <div class="inline-block px-4 py-2 bg-aitblue/10 text-aitblue rounded-full text-sm font-semibold mb-4">
-          Join Our Community
-        </div>
-        <h2 class="section-title text-5xl font-serif font-bold gradient-text mb-6">
-          Admissions
-        </h2>
-        <p class="section-subtitle text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Begin your child's journey to academic excellence and global success
-          at American International Tutorial
-        </p>
-      </div>
-
-      <div class=" mx-auto">
-        <div class="grid lg:grid-cols-2 gap-16">
-          <!-- Required Documents -->
-
-          <div class="animate-on-scroll">
-            <div class="curriculum-card p-10 rounded-3xl shadow-2xl">
-              <div class="flex items-center gap-4 mb-8">
-                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-3 rounded-xl shadow-lg">
-                  <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-                    </path>
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900">
-                  Required <span class="text-aitblue">Documents</span>
-                </h3>
-              </div>
-
-              <div class="space-y-5">
-                <div class="flex items-start gap-4 p-4 hover:bg-gray-50/50 rounded-xl transition-all">
-                  <div class="bg-aitblue/10 text-aitblue p-2 rounded-lg mt-0.5 flex-shrink-0">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-gray-800">Application Form</h4>
-                    <p class="text-gray-600 text-sm mt-1">Completed form with all required personal and academic
-                      information</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 hover:bg-gray-50/50 rounded-xl transition-all">
-                  <div class="bg-aitblue/10 text-aitblue p-2 rounded-lg mt-0.5 flex-shrink-0">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-gray-800">Academic Records</h4>
-                    <p class="text-gray-600 text-sm mt-1">Previous school transcripts and academic certificates</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 hover:bg-gray-50/50 rounded-xl transition-all">
-                  <div class="bg-aitblue/10 text-aitblue p-2 rounded-lg mt-0.5 flex-shrink-0">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-gray-800">Birth Certificate</h4>
-                    <p class="text-gray-600 text-sm mt-1">Official birth certificate for age verification</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 hover:bg-gray-50/50 rounded-xl transition-all">
-                  <div class="bg-aitblue/10 text-aitblue p-2 rounded-lg mt-0.5 flex-shrink-0">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-gray-800">Passport Photos</h4>
-                    <p class="text-gray-600 text-sm mt-1">Recent passport-size photographs</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Application Process - Modern Card -->
-          <div class="animate-on-scroll">
-            <div class="curriculum-card p-10 rounded-3xl shadow-2xl">
-              <div class="flex items-center gap-4 mb-8">
-                <div class="bg-gradient-to-br from-aityellow to-orange-500 text-white p-3 rounded-xl shadow-lg">
-                  <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
-                    </path>
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900">
-                  Application <span class="text-aityellow">Steps</span>
-                </h3>
-              </div>
-
-              <div class="space-y-5">
-                <div class="flex items-start gap-4 p-4 hover:bg-gray-50/50 rounded-xl transition-all">
-                  <div
-                    class="bg-gradient-to-br from-blue-500 to-blue-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                    1
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-gray-800">Submit Application</h4>
-                    <p class="text-gray-600 text-sm mt-1">Complete form and submit required documents</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 hover:bg-gray-50/50 rounded-xl transition-all">
-                  <div
-                    class="bg-gradient-to-br from-green-500 to-green-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                    2
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-gray-800">Document Review</h4>
-                    <p class="text-gray-600 text-sm mt-1">Our team reviews your application</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 hover:bg-gray-50/50 rounded-xl transition-all">
-                  <div
-                    class="bg-gradient-to-br from-purple-500 to-purple-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                    3
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-gray-800">Interview</h4>
-                    <p class="text-gray-600 text-sm mt-1">Student and parent interview session</p>
-                  </div>
-                </div>
-
-                <div class="flex items-start gap-4 p-4 hover:bg-gray-50/50 rounded-xl transition-all">
-                  <div
-                    class="bg-gradient-to-br from-orange-500 to-orange-600 text-white w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
-                    4
-                  </div>
-                  <div>
-                    <h4 class="font-semibold text-gray-800">Admission Decision</h4>
-                    <p class="text-gray-600 text-sm mt-1">Notification within 5-7 working days</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Key Information Cards -->
-        <div class="grid md:grid-cols-2 gap-8 mt-16">
-          <div
-            class="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 shadow-2xl rounded-2xl animate-on-scroll">
-            <div
-              class="bg-gradient-to-br from-blue-500 to-blue-600 text-white w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-4">
-              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 0V6a2 2 0 012-2h4a2 2 0 012 2v1M8 7h8m-8 0H6a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-2">
-                </path>
-              </svg>
-            </div>
-            <h4 class="text-lg font-bold text-gray-800 mb-2">
-              Academic Year
-            </h4>
-            <p class="card-text text-gray-600">
-              Starts in January
+          <div class="mt-6 space-y-4 leading-relaxed text-[#3d5270]">
+            <p>
+              I am delighted to welcome you to the American International Tutorial. I have a vision to build a nation that is honest, moral, industrious, skilled, and intelligent—one that follows the path of Islam as described in the Holy Qur'an and taught by Prophet Muhammad (peace be upon him).
             </p>
-          </div>
-
-          <div
-            class="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl shadow-2xl animate-on-scroll">
-            <div
-              class="bg-gradient-to-br from-orange-500 to-orange-600 text-white w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-4">
-              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-                </path>
-              </svg>
-            </div>
-            <h4 class="text-lg font-bold text-gray-800 mb-2">Class Size</h4>
-            <p class="card-text text-gray-600">
-              Maximum 20 students per class
+            <p>
+              As a Muslim, I believe that without strong religious beliefs, one cannot lead a truly moral life. Everyone should strive to be a true Muslim. Furthermore, other religions also uphold moral values. Almighty Allah provides wealth equally among Muslims, Hindus, Buddhists, and Christians, so why shouldn't we respect one another? We must show respect to people of all religions.
+            </p>
+            <p>
+              To fulfill our vision, we will focus on Islamic studies and Qur'an education. We will provide support for Hifz according to parents' preferences and ensure religious studies are available for students of other faiths.
+            </p>
+            <p>
+              We are following the American and British education systems, and we aim to present all teaching materials in a clear, scientific, and digital format based on their syllabuses. We emphasize fluency in English, mathematics, science, history, geography, Bangladesh studies, and ICT.
+            </p>
+            <p>
+              We encourage students to learn additional languages, such as German, Spanish, or French, and will organize art and craft activities as well as other extracurricular opportunities.
+            </p>
+            <p class="font-semibold text-navy">
+              Finally, entrust us with your child, and we will return to you a moral, honest, skilled, and confident young person.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-  </section>
-
-  <!-- Call to Action -->
-  <section class="py-20 hero-gradient text-white relative overflow-hidden">
-    <div class="absolute inset-0 bg-black/10"></div>
-    <div class="absolute top-10 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-10 right-10 w-80 h-80 bg-aityellow/10 rounded-full blur-3xl"></div>
-
-    <div class="container mx-auto px-6 text-center relative z-10">
-      <div class="animate-on-scroll">
-        <h2 class="section-title text-4xl font-serif font-bold mb-6">
-          Begin Your Educational Journey at AIT
-        </h2>
-        <p class="section-subtitle text-xl mb-8 max-w-3xl mx-auto opacity-90 leading-relaxed">
-          Schedule a campus visit or speak with our admissions team to learn
-          more about our Edexcel programs and how we can help your child
-          achieve their dreams.
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-6">
-          <a href="#contact"
-            class="bg-white hover:bg-gray-100 text-aitblue font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center space-x-2">
-            <span>Contact Admissions</span>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-              </path>
-            </svg>
-          </a>
-          <a href="#"
-            class="bg-transparent hover:bg-white/10 border-2 border-white text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center space-x-2">
-            <span>Download Prospectus</span>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
-              </path>
-            </svg>
-          </a>
+    <section class="bg-white" aria-labelledby="goals-heading">
+      <div class="max-w-6xl mx-auto px-6 py-16 lg:py-20">
+        <h2 id="goals-heading" class="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-navy">Goals for students</h2>
+        <p class="mt-3 max-w-2xl text-[#3d5270]">Skills and values for study abroad, and for a useful life at home.</p>
+        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <article class="border border-line p-5">
+            <h3 class="font-semibold text-navy">English proficiency</h3>
+            <p class="mt-2 text-sm leading-relaxed text-[#3d5270]">Fluent English for academic work and for life after school.</p>
+          </article>
+          <article class="border border-line p-5">
+            <h3 class="font-semibold text-navy">Quranic studies</h3>
+            <p class="mt-2 text-sm leading-relaxed text-[#3d5270]">Recitation, memorization, and understanding, with proper tajweed and the wider Islamic tradition.</p>
+          </article>
+          <article class="border border-line p-5">
+            <h3 class="font-semibold text-navy">Academic results</h3>
+            <p class="mt-2 text-sm leading-relaxed text-[#3d5270]">Serious preparation for Edexcel IGCSE and A-Level, with support matched to the student.</p>
+          </article>
+          <article class="border border-line p-5">
+            <h3 class="font-semibold text-navy">Islamic character</h3>
+            <p class="mt-2 text-sm leading-relaxed text-[#3d5270]">Ethics and identity taught beside modern subjects, not in place of them.</p>
+          </article>
+          <article class="border border-line p-5">
+            <h3 class="font-semibold text-navy">A wider world</h3>
+            <p class="mt-2 text-sm leading-relaxed text-[#3d5270]">The habits needed to live and study elsewhere, without losing cultural roots.</p>
+          </article>
+          <article class="border border-line p-5">
+            <h3 class="font-semibold text-navy">Clear thinking</h3>
+            <p class="mt-2 text-sm leading-relaxed text-[#3d5270]">Analysis and problem-solving for university, and for study after it.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16 animate-on-scroll">
-        <div class="inline-block px-4 py-2 bg-aitblue/10 text-aitblue rounded-full text-sm font-semibold mb-4">
-          Get in Touch
-        </div>
-        <h2 class="section-title text-4xl font-serif font-bold gradient-text mb-4">
-          Contact Information
-        </h2>
-        <p class="section-subtitle text-xl text-gray-600 max-w-2xl mx-auto">
-          We're here to answer your questions and help you begin your journey
-          with AIT
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="contact-card p-8 rounded-2xl text-center animate-on-scroll">
-          <div
-            class="bg-gradient-to-br from-blue-500 to-blue-600 text-white w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-          </div>
-          <h3 class="card-title text-xl font-bold text-gray-800 mb-3">
-            Visit Us
-          </h3>
-          <p class="card-text text-gray-600 leading-relaxed">
-            123 School Road, Demra<br />
-            Dhaka, Bangladesh
-          </p>
-        </div>
-
-        <div class="contact-card p-8 rounded-2xl text-center animate-on-scroll">
-          <div
-            class="bg-gradient-to-br from-green-500 to-green-600 text-white w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-              </path>
-            </svg>
-          </div>
-          <h3 class="card-title text-xl font-bold text-gray-800 mb-3">
-            Call Us
-          </h3>
-          <p class="card-text text-gray-600 leading-relaxed">
-            +880 2-XXXXXXX<br />
-            +880 1XXXXXXXXX
-          </p>
-        </div>
-
-        <div class="contact-card p-8 rounded-2xl text-center animate-on-scroll">
-          <div
-            class="bg-gradient-to-br from-orange-500 to-orange-600 text-white w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-              </path>
-            </svg>
-          </div>
-          <h3 class="card-title text-xl font-bold text-gray-800 mb-3">
-            Email Us
-          </h3>
-          <p class="card-text text-gray-600 leading-relaxed">
-            admissions@aitschool.org<br />
-            info@aitschool.org
-          </p>
-        </div>
-
-        <div class="contact-card p-8 rounded-2xl text-center animate-on-scroll">
-          <div
-            class="bg-gradient-to-br from-purple-500 to-purple-600 text-white w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <h3 class="card-title text-xl font-bold text-gray-800 mb-3">
-            Office Hours
-          </h3>
-          <p class="card-text text-gray-600 leading-relaxed">
-            Sun-Thu: 8AM-4PM<br />
-            Sat: 9AM-1PM
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
-    <div class="container mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-8">
+    <section id="curriculum" class="bg-mist">
+      <div class="max-w-6xl mx-auto px-6 py-16 lg:py-20 grid lg:grid-cols-2 gap-12">
         <div>
-          <div class="flex items-center space-x-2 mb-4">
-            <img class="h-20 w-20" src="./icons/logo.svg" alt="AIT Logo" />
-            <div>
-              <h3 class="text-xl font-serif font-bold text-aityellow">
-                American International Tutorial
-              </h3>
-              <p class="text-sm text-gray-400">Excellence in Education</p>
-            </div>
-          </div>
-          <p class="mb-4 text-gray-300">
-            Providing world-class British education in Bangladesh since 2024.
+          <h2 class="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-navy">The Edexcel curriculum</h2>
+          <p class="mt-5 text-lg leading-relaxed text-[#3d5270]">
+            One of the most respected British programs in the world. Qualifications from this pathway are accepted by universities in the UK, the USA, Canada, and Australia.
           </p>
-          <div class="flex space-x-4">
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-              </svg>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="text-lg font-bold mb-4">Quick Links</h4>
-          <ul class="space-y-2">
-            <li>
-              <a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a>
-            </li>
-            <li>
-              <a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a>
-            </li>
-            <li>
-              <a href="#curriculum" class="text-gray-400 hover:text-white transition-colors">Edexcel Curriculum</a>
-            </li>
-            <li>
-              <a href="#admissions" class="text-gray-400 hover:text-white transition-colors">Admissions</a>
-            </li>
-            <li>
-              <a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a>
-            </li>
+          <ul class="mt-6 space-y-3 text-[#3d5270]">
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 bg-school"></span>Rigorous standards that ask students to reach, not coast.</li>
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 bg-school"></span>Assessment that tests understanding, not only recall.</li>
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 bg-school"></span>A continuous path from primary school through secondary.</li>
           </ul>
         </div>
+        <ol class="bg-white border border-line divide-y divide-line">
+          <li class="p-5 sm:p-6 grid sm:grid-cols-[6.5rem_1fr] gap-2">
+            <p class="text-sm font-semibold text-school">Ages 5–11</p>
+            <div>
+              <h3 class="font-semibold text-navy">Primary years</h3>
+              <p class="mt-1 text-sm leading-relaxed text-[#3d5270]">Foundations in the core subjects, on the Edexcel Primary curriculum, with Islamic studies alongside.</p>
+            </div>
+          </li>
+          <li class="p-5 sm:p-6 grid sm:grid-cols-[6.5rem_1fr] gap-2">
+            <p class="text-sm font-semibold text-school">Ages 11–14</p>
+            <div>
+              <h3 class="font-semibold text-navy">Lower secondary</h3>
+              <p class="mt-1 text-sm leading-relaxed text-[#3d5270]">The Edexcel Lower Secondary program, widening subject choice and preparing students for IGCSE.</p>
+            </div>
+          </li>
+          <li class="p-5 sm:p-6 grid sm:grid-cols-[6.5rem_1fr] gap-2">
+            <p class="text-sm font-semibold text-school">Ages 14–16</p>
+            <div>
+              <h3 class="font-semibold text-navy">IGCSE</h3>
+              <p class="mt-1 text-sm leading-relaxed text-[#3d5270]">Internationally recognized qualifications, with eight to ten subjects.</p>
+            </div>
+          </li>
+          <li class="p-5 sm:p-6 grid sm:grid-cols-[6.5rem_1fr] gap-2">
+            <p class="text-sm font-semibold text-school">Ages 16–18</p>
+            <div>
+              <h3 class="font-semibold text-navy">A-Levels</h3>
+              <p class="mt-1 text-sm leading-relaxed text-[#3d5270]">Specialist study for entry to universities in Bangladesh and abroad.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-        <div>
-          <h4 class="text-lg font-bold mb-4">Contact Us</h4>
-          <address class="not-italic">
-            <p class="mb-2">123 School Road, Demra</p>
-            <p class="mb-2">Dhaka, Bangladesh</p>
-            <p class="mb-2">Phone: +880 2-XXXXXXX</p>
-            <p class="mb-2">Mobile: +880 1XXXXXXXXX</p>
-            <p class="mb-2">Email: admissions@aitschool.org</p>
-          </address>
+    <section id="admissions" class="bg-white">
+      <div class="max-w-6xl mx-auto px-6 py-16 lg:py-20">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-navy">Admissions</h2>
+        <p class="mt-3 max-w-2xl text-[#3d5270]">Bring the documents, meet the school, and receive a decision within 5–7 working days.</p>
+
+        <ol class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <li class="bg-mist p-5">
+            <p class="text-school font-bold">1</p>
+            <h3 class="mt-2 font-semibold text-navy">Submit</h3>
+            <p class="mt-1 text-sm text-[#3d5270]">Complete the form and send the documents listed below.</p>
+          </li>
+          <li class="bg-mist p-5">
+            <p class="text-school font-bold">2</p>
+            <h3 class="mt-2 font-semibold text-navy">Review</h3>
+            <p class="mt-1 text-sm text-[#3d5270]">The admissions team reads the application.</p>
+          </li>
+          <li class="bg-mist p-5">
+            <p class="text-school font-bold">3</p>
+            <h3 class="mt-2 font-semibold text-navy">Interview</h3>
+            <p class="mt-1 text-sm text-[#3d5270]">A conversation with the student and parents.</p>
+          </li>
+          <li class="bg-mist p-5">
+            <p class="text-school font-bold">4</p>
+            <h3 class="mt-2 font-semibold text-navy">Decision</h3>
+            <p class="mt-1 text-sm text-[#3d5270]">You hear from us within 5–7 working days.</p>
+          </li>
+        </ol>
+
+        <div class="mt-10 grid lg:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-semibold text-navy">Documents to bring</h3>
+            <ul class="mt-4 divide-y divide-line border-y border-line">
+              <li class="py-3">
+                <p class="font-medium text-navy">Application form</p>
+                <p class="text-sm text-[#52657a]">Personal and academic details, completed in full.</p>
+              </li>
+              <li class="py-3">
+                <p class="font-medium text-navy">Academic records</p>
+                <p class="text-sm text-[#52657a]">Transcripts and certificates from the previous school.</p>
+              </li>
+              <li class="py-3">
+                <p class="font-medium text-navy">Birth certificate</p>
+                <p class="text-sm text-[#52657a]">For age verification.</p>
+              </li>
+              <li class="py-3">
+                <p class="font-medium text-navy">Passport photographs</p>
+                <p class="text-sm text-[#52657a]">Recent passport-size prints.</p>
+              </li>
+            </ul>
+          </div>
+          <aside class="bg-navy text-white p-7 h-fit">
+            <h3 class="text-xl font-semibold">Before you apply</h3>
+            <dl class="mt-5 space-y-4">
+              <div>
+                <dt class="text-sm text-white/70">Academic year</dt>
+                <dd class="font-medium">Begins in January</dd>
+              </div>
+              <div>
+                <dt class="text-sm text-white/70">Class size</dt>
+                <dd class="font-medium">No more than 20 students</dd>
+              </div>
+              <div>
+                <dt class="text-sm text-white/70">Questions</dt>
+                <dd><a class="underline underline-offset-2" href="mailto:admissions@aitschool.org">admissions@aitschool.org</a></dd>
+              </div>
+            </dl>
+          </aside>
         </div>
       </div>
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-        <p>
-          &copy; 2025 American International Tutorial. All rights reserved.
-        </p>
+    </section>
+
+    <section class="bg-navy text-white">
+      <div class="max-w-6xl mx-auto px-6 py-14 grid lg:grid-cols-12 gap-6 items-center">
+        <div class="lg:col-span-8">
+          <h2 class="text-3xl md:text-4xl font-bold tracking-[-0.02em]">Begin the year at AIT.</h2>
+          <p class="mt-3 text-white/80 max-w-xl">Visit the campus or speak with admissions about the Edexcel programs and whether the school is the right place for your child.</p>
+        </div>
+        <div class="lg:col-span-4 lg:justify-self-end">
+          <a href="#contact" class="btn btn-white">Contact admissions</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-white">
+      <div class="max-w-6xl mx-auto px-6 py-16 lg:py-20">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-navy">Contact</h2>
+        <div class="mt-8 grid lg:grid-cols-[minmax(0,1.5fr)_minmax(16rem,0.7fr)] gap-4 lg:items-stretch">
+          <div class="border border-line flex flex-col min-h-80">
+            <iframe
+              title="Map of American International Tutorial, Matuail, Jatrabari, Dhaka"
+              src="https://maps.google.com/maps?q=23.6994102,90.4747484&z=16&output=embed"
+              class="block w-full flex-1 min-h-80"
+              style="border:0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="grid content-start gap-4">
+            <article class="border border-line p-5">
+              <h3 class="text-sm font-semibold text-school">Visit</h3>
+              <p class="mt-2 text-navy leading-relaxed">
+                <a class="hover:text-school" href="https://maps.app.goo.gl/FdvYZ2ABRMLW7zpc9" target="_blank" rel="noopener noreferrer">House 50/1, Road 8/A, Badsha Mia Road<br />Matuail New Town, Jatrabari<br />Dhaka 1362, Bangladesh</a>
+              </p>
+            </article>
+            <article class="border border-line p-5">
+              <h3 class="text-sm font-semibold text-school">Call</h3>
+              <p class="mt-2 text-navy leading-relaxed">+880 2-XXXXXXX<br />+880 1XXXXXXXXX</p>
+            </article>
+            <article class="border border-line p-5">
+              <h3 class="text-sm font-semibold text-school">Write</h3>
+              <p class="mt-2 leading-relaxed">
+                <a class="text-navy hover:text-school" href="mailto:admissions@aitschool.org">admissions@aitschool.org</a><br />
+                <a class="text-navy hover:text-school" href="mailto:info@aitschool.org">info@aitschool.org</a>
+              </p>
+            </article>
+            <article class="border border-line p-5">
+              <h3 class="text-sm font-semibold text-school">Hours</h3>
+              <p class="mt-2 text-navy leading-relaxed">Sun–Thu, 8:00–16:00<br />Saturday, 9:00–13:00</p>
+            </article>
+            <p class="text-sm">
+              <a class="font-semibold text-school hover:text-navy" href="https://maps.app.goo.gl/FdvYZ2ABRMLW7zpc9" target="_blank" rel="noopener noreferrer">Open the campus pin in Google Maps</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#082844] text-white/75">
+    <div class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <div class="flex items-center gap-3">
+          <img class="h-14 w-auto bg-white p-1.5" src="./icons/logo.svg" alt="" />
+          <div>
+            <p class="text-lg font-semibold text-white">American International Tutorial</p>
+            <p class="text-sm text-white/60 mt-0.5">Jatrabari, Dhaka · Est. 2024</p>
+          </div>
+        </div>
+        <p class="mt-4 max-w-sm leading-relaxed">British curriculum and Islamic studies for students aged 5 to 18.</p>
+      </div>
+      <div class="md:col-span-3">
+        <h2 class="text-sm font-semibold text-white">On this page</h2>
+        <ul class="mt-3 space-y-2">
+          <li><a href="#about" class="hover:text-white">About</a></li>
+          <li><a href="#curriculum" class="hover:text-white">Curriculum</a></li>
+          <li><a href="#admissions" class="hover:text-white">Admissions</a></li>
+          <li><a href="#contact" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-4">
+        <h2 class="text-sm font-semibold text-white">Admissions office</h2>
+        <address class="not-italic mt-3 space-y-1 leading-relaxed">
+          <p><a class="hover:text-white" href="https://maps.app.goo.gl/FdvYZ2ABRMLW7zpc9" target="_blank" rel="noopener noreferrer">House 50/1, Road 8/A, Badsha Mia Road<br />Matuail New Town, Jatrabari<br />Dhaka 1362</a></p>
+          <p class="pt-2">+880 2-XXXXXXX</p>
+          <p><a class="hover:text-white" href="mailto:admissions@aitschool.org">admissions@aitschool.org</a></p>
+        </address>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-6 py-4 text-sm text-white/55">
+        <p>&copy; 2026 American International Tutorial</p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Mobile menu functionality
-    const mobileMenuButton = document.getElementById("mobile-menu-button");
-    const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
-    const mobileMenuSidebar = document.getElementById("mobile-menu-sidebar");
-    const mobileMenuClose = document.getElementById("mobile-menu-close");
-    const hamburger = document.querySelector(".hamburger");
-    const navbar = document.getElementById("navbar");
+    const menu = document.getElementById("mobile-menu");
+    const menuButton = document.getElementById("menu-button");
+    const menuClose = document.getElementById("menu-close");
 
-    function openMobileMenu() {
-      mobileMenuOverlay.classList.add("active");
-      mobileMenuSidebar.classList.add("active");
-      hamburger.classList.add("active");
-      document.body.style.overflow = "hidden";
+    function setMenu(open) {
+      menu.hidden = !open;
+      menu.classList.toggle("is-open", open);
+      menuButton.setAttribute("aria-expanded", open ? "true" : "false");
+      menuButton.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      document.body.style.overflow = open ? "hidden" : "";
     }
 
-    function closeMobileMenu() {
-      mobileMenuOverlay.classList.remove("active");
-      mobileMenuSidebar.classList.remove("active");
-      hamburger.classList.remove("active");
-      document.body.style.overflow = "";
+    menuButton.addEventListener("click", () => setMenu(true));
+    menuClose.addEventListener("click", () => setMenu(false));
+    menu.addEventListener("click", (event) => {
+      if (event.target === menu) setMenu(false);
+    });
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setMenu(false));
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setMenu(false);
+    });
+
+    const navLinks = document.querySelectorAll("header .nav-link");
+    const sections = [...document.querySelectorAll("main section[id]")];
+
+    function markCurrentSection() {
+      const marker = window.scrollY + 140;
+      let current = sections[0]?.id;
+      sections.forEach((section) => {
+        if (section.offsetTop <= marker) current = section.id;
+      });
+      navLinks.forEach((link) => {
+        link.classList.toggle("is-active", link.getAttribute("href") === "#" + current);
+      });
     }
 
-    mobileMenuButton.addEventListener("click", openMobileMenu);
-    mobileMenuClose.addEventListener("click", closeMobileMenu);
-    mobileMenuOverlay.addEventListener("click", closeMobileMenu);
-
-    // Close mobile menu when clicking on navigation links
-    document
-      .querySelectorAll('#mobile-menu-sidebar a[href^="#"]')
-      .forEach((link) => {
-        link.addEventListener("click", closeMobileMenu);
-      });
-
-    // Navbar scroll effect
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        navbar.classList.add("nav-scrolled");
-      } else {
-        navbar.classList.remove("nav-scrolled");
-      }
-    });
-
-    // Animate elements on scroll
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animated");
-        }
-      });
-    }, observerOptions);
-
-    // Observe all elements with animate-on-scroll class
-    document.querySelectorAll(".animate-on-scroll").forEach((el) => {
-      observer.observe(el);
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          target.scrollIntoView({
-            behavior: "smooth",
-          });
-        }
-      });
-    });
+    markCurrentSection();
+    window.addEventListener("scroll", markCurrentSection, { passive: true });
   </script>
 </body>
 
